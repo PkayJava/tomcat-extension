@@ -89,6 +89,7 @@
 			<groupId>org.bouncycastle</groupId>
 			<artifactId>bctls-jdk15on</artifactId>
 			<version>${bouncycastle.version}</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
@@ -96,6 +97,7 @@
 			<artifactId>conscrypt-openjdk</artifactId>
 			<version>${conscrypt-openjdk.version}</version>
 			<classifier>${os.detected.classifier}</classifier>
+			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
@@ -109,18 +111,21 @@
 			<groupId>org.bouncycastle</groupId>
 			<artifactId>bcpg-jdk15on</artifactId>
 			<version>${bouncycastle.version}</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.bouncycastle</groupId>
 			<artifactId>bcpkix-jdk15on</artifactId>
 			<version>${bouncycastle.version}</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.bouncycastle</groupId>
 			<artifactId>bcprov-jdk15on</artifactId>
 			<version>${bouncycastle.version}</version>
+			<scope>provided</scope>
 		</dependency>
 
 	</dependencies>
