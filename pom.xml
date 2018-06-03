@@ -81,9 +81,48 @@
 		<tomcat.version>9.0.8</tomcat.version>
 		<os-maven-plugin.version>1.6.0</os-maven-plugin.version>
 		<conscrypt-openjdk.version>1.1.2</conscrypt-openjdk.version>
+		<commons-io.version>2.6</commons-io.version>
+		<activemq.version>5.15.4</activemq.version>
+		<jms.version>1.1.1</jms.version>
+		<unirest-java.version>2.2.03</unirest-java.version>
 	</properties>
 
 	<dependencies>
+
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>${gson.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>io.github.openunirest</groupId>
+			<artifactId>unirest-java</artifactId>
+			<version>${unirest-java.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-jms_1.1_spec</artifactId>
+			<version>${jms.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-client</artifactId>
+			<version>${activemq.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${commons-io.version}</version>
+			<scope>provided</scope>
+		</dependency>
 
 		<dependency>
 			<groupId>org.bouncycastle</groupId>
@@ -101,8 +140,22 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-dbcp</artifactId>
+			<version>${tomcat.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-core</artifactId>
+			<version>${tomcat.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-jdbc</artifactId>
 			<version>${tomcat.version}</version>
 			<scope>provided</scope>
 		</dependency>

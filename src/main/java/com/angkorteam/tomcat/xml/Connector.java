@@ -1,12 +1,16 @@
 package com.angkorteam.tomcat.xml;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAnyAttribute;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.namespace.QName;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Connector {
@@ -37,6 +41,9 @@ public class Connector {
 
     @XmlElement(name = "UpgradeProtocol")
     private UpgradeProtocol upgradeProtocol;
+
+    @XmlAnyAttribute
+    private Map<QName, String> extension = new HashMap<>();
 
     @XmlElement(name = "SSLHostConfig")
     private List<SSLHostConfig> sslHostConfigs = new ArrayList<>();
@@ -79,6 +86,10 @@ public class Connector {
 
     public List<SSLHostConfig> getSslHostConfigs() {
         return sslHostConfigs;
+    }
+
+    public Map<QName, String> getExtension() {
+        return extension;
     }
 
 }

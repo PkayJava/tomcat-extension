@@ -1,8 +1,13 @@
 package com.angkorteam.tomcat.xml;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAnyAttribute;
 import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.namespace.QName;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Resource {
@@ -19,11 +24,8 @@ public class Resource {
     @XmlAttribute(name = "description")
     private String description;
 
-    @XmlAttribute(name = "factory")
-    private String factory;
-
-    @XmlAttribute(name = "pathname")
-    private String pathname;
+    @XmlAnyAttribute
+    private Map<QName, String> extension = new HashMap<>();
 
     public String getName() {
         return name;
@@ -41,12 +43,8 @@ public class Resource {
         return description;
     }
 
-    public String getFactory() {
-        return factory;
-    }
-
-    public String getPathname() {
-        return pathname;
+    public Map<QName, String> getExtension() {
+        return extension;
     }
 
 }
